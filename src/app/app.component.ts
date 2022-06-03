@@ -14,4 +14,11 @@ export class AppComponent {
     this.enteredText=event.target.value
      console.log(event.target.value)
   }
+
+  addClass(randomLetter:string,enteredLetter:string):any{
+    if(!enteredLetter){
+      return 'pending'
+    }
+    return randomLetter==enteredLetter ? 'correct':'incorrect'
+  }
 }
